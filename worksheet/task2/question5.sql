@@ -12,6 +12,7 @@ SELECT Student.StudentId, FirstName, LastName, SUM(Course.Credits) AS TotalCredi
 FROM Student
 JOIN Enrolment ON Student.StudentId=Enrolment.StudentId
 JOIN Course ON Enrolment.CourseId=Course.CourseId
+GROUP BY Enrolment.CourseId HAVING Grade>=40;
 
 -- if grade is greater than or equal to 40
 -- then get the credits from that course
