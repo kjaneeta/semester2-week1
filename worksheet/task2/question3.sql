@@ -11,4 +11,5 @@
 
 SELECT DepartmentName, COUNT(EnrolmentId) AS TotalEnrolments FROM Course
 JOIN Department ON Course.DepartmentId=Department.DepartmentId
-JOIN Enrolment ON Enrolment.CourseId=Course.CourseId;
+JOIN Enrolment ON Enrolment.CourseId=Course.CourseId
+GROUP BY DepartmentName;
